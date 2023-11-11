@@ -58,6 +58,8 @@ dcweb ./vendor/bin/run toolkit:build-dev
 dcweb ./vendor/bin/run toolkit:install-clean
 # Perform a clone installation with production data.
 dcweb ./vendor/bin/run toolkit:install-clone
+# Get the uri to start working on the browser.
+dcweb ./vendor/bin/drush uli --uri=http://localhost:8080/web/
 ```
 
 Using default configuration your Drupal site will be available locally at:

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="web/core/tests/bootstrap.php" backupGlobals="true" colors="true" cacheResult="false">
+  <php>
+    <ini name="error_reporting" value="32767"/>
+    <ini name="memory_limit" value="-1"/>
+    <env name="SIMPLETEST_IGNORE_DIRECTORIES" value="vendor,node_modules,test-site,web"/>
+    <env name="SIMPLETEST_BASE_URL" value="http://web:8080/web"/>
+    <env name="SIMPLETEST_DB" value="mysql://:@mysql:3306/"/>
+    <env name="MINK_DRIVER_ARGS_WEBDRIVER" value='["chrome", null, "http://selenium:4444/wd/hub"]'/>
+    <env name="DTT_BASE_URL" value="http://web:8080/web"/>
+    <env name="DTT_MINK_DRIVER_ARGS" value='["chrome", null, "http://selenium:4444/wd/hub"]'/>
+    <env name="SYMFONY_DEPRECATIONS_HELPER" value='disabled'/>
+  </php>
+  <testsuites>
+    <testsuite name="unit">
+      <directory>./lib/modules/**/tests/src/Unit/</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

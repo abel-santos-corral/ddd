@@ -81,6 +81,9 @@ toolkit:
             commands:
                 - { task: run, command: 'drupal:setup-test' }
                 - { task: symlink, from: "../../../resources/monolog.services.yml", to: "${drupal.root}/sites/default/monolog.services.yml" }
+                - { task: "symlink", from: "../../lib/modules", to: "${drupal.root}/modules/custom" }
+                - { task: "symlink", from: "../../lib/themes", to: "${drupal.root}/themes/custom" }
+                - { task: "symlink", from: "../../lib/profiles", to: "${drupal.root}/profiles/custom" }
 commands:
   drupal:setup-test:
   - { task: process, source: behat.yml.dist, destination: behat.yml }

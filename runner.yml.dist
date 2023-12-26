@@ -86,4 +86,5 @@ toolkit:
                 - { task: "symlink", from: "../../lib/profiles", to: "${drupal.root}/profiles/custom" }
 commands:
   drupal:setup-test:
-  - { task: process, source: behat.yml.dist, destination: behat.yml }
+  - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
+  - { task: "process", source: "phpunit.xml.dist", destination: "phpunit.xml" }

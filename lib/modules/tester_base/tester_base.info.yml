@@ -1,6 +1,6 @@
-name: 'TDD Tiered price'
+name: 'Tester base'
 type: module
-description: 'Provides module for the management of Tiered price.'
-package: 'TDD'
+description: 'Provides module for the training of pupunit, behat and other stuff of testing.'
+package: 'ddd'
 php: 8.x
 core_version_requirement: ^10

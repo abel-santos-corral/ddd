@@ -1,0 +1,6 @@
+name: 'Responses'
+type: module
+description: 'Provides module for the exercises of response from drupalizeme site.'
+package: 'Drupalize'
+php: 8.x
+core_version_requirement: ^10

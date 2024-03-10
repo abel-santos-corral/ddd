@@ -1,6 +1,6 @@
 name: 'Responses'
 type: module
 description: 'Provides module for the exercises of response from drupalizeme site.'
-package: 'Drupalize'
+package: 'ddd'
 php: 8.x
 core_version_requirement: ^10

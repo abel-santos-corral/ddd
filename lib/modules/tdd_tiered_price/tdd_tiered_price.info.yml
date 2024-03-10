@@ -1,6 +1,6 @@
 name: 'TDD Tiered price'
 type: module
 description: 'Provides module for the management of Tiered price.'
-package: 'TDD'
+package: 'ddd'
 php: 8.x
 core_version_requirement: ^10

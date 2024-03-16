@@ -1,0 +1,7 @@
+tester_base.whoami:
+  path: '/whoami'
+  defaults:
+    _controller: '\Drupal\tester_base\Controller\WhoamiController::build'
+    _title: 'Who Am I'
+  requirements:
+    _permission: 'access_content'

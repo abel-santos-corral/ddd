@@ -4,10 +4,10 @@ namespace Drupal\Tests\responses\Unit\Controller;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\responses\Controller\ExampleJsonController;
 use Drupal\Tests\UnitTestCase;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use \Drupal\Core\Session\AccountInterface;
 
 /**
  * ServiceController unit tests.
@@ -70,11 +70,17 @@ class ExampleJsonControllerTest extends UnitTestCase {
     \Drupal::setContainer($container);
   }
 
+  /**
+   * Tests the buildCacheableResponse() method of the ExampleJsonController.
+   *
+   * @covers ::buildCacheableResponse
+   */
   public function testbuildCacheableResponse() {
-    $exampleJsonController = new ExampleJsonController();
+    $jsonController = new ExampleJsonController();
 
-    $response = $exampleJsonController->buildCacheableResponse();
+    $response = $jsonController->buildCacheableResponse();
     $this->assertEquals('200', $response->getStatusCode());
     $this->assertEquals('{"user":{"id":9999,"name":"Horse Luis","email":"horse.luis@mail.com","roles":"[administrator]"}}', $response->getContent());
   }
+
 }

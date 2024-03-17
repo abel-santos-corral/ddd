@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * Example controller that returns JSON responses.
- */
 
 declare(strict_types = 1);
 
@@ -12,12 +8,15 @@ use Drupal\Core\Cache\CacheableJsonResponse;
 use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ * Example json controller.
+ */
 class ExampleJsonController extends ControllerBase {
 
   /**
    * Return a cacheable plain text response.
    */
-  public function buildCacheableResponse(): CacheableJsonResponse  {
+  public function buildCacheableResponse(): CacheableJsonResponse {
     // Load the complete user object because we need the data in a form that
     // implements \Drupal\Core\Cache\CacheableDependencyInterface.
     $current_user = $this->entityTypeManager()

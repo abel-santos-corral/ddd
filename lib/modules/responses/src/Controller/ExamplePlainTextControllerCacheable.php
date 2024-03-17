@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Example controller that returns plain text responses.
- */
-
 declare(strict_types = 1);
 
 namespace Drupal\responses\Controller;
@@ -13,12 +8,15 @@ use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Cache\CacheableResponse;
 use Drupal\Core\Controller\ControllerBase;
 
+/**
+ * Example plain text cacheable controller.
+ */
 class ExamplePlainTextControllerCacheable extends ControllerBase {
 
   /**
    * Return a cacheable plain text response.
    */
-  public function buildCacheableResponse(): CacheableResponse  {
+  public function buildCacheableResponse(): CacheableResponse {
     // Load the complete user object because we need the data in a form that
     // implements \Drupal\Core\Cache\CacheableDependencyInterface.
     $current_user = $this->entityTypeManager()

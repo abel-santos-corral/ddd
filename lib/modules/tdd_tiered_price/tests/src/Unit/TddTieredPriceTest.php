@@ -14,6 +14,7 @@ use Drupal\Tests\UnitTestCase;
  * @coversDefaultClass \Drupal\tdd_tiered_price\TddTieredPrice
  */
 class TddTieredPriceTest extends UnitTestCase {
+
   /**
    * Test getting a tiered price.
    *
@@ -24,4 +25,5 @@ class TddTieredPriceTest extends UnitTestCase {
     $tdd_tiered_price = new TddTieredPrice();
     $this->assertEquals($expected_result, $tdd_tiered_price->getTieredPrice(1));
   }
+
 }

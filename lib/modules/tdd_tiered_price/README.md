@@ -34,4 +34,3 @@ Here are some examples that can guide you during the development process:
 | 50	           | 199 €      | 9950 € |
 | 51	           | 149 €      | 7599 € |
 | 52            | 149 €      | 7748 € |
-

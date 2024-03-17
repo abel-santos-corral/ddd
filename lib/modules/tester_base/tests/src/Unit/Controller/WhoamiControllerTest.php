@@ -1,10 +1,9 @@
 <?php
 
-namespace Drupal\Tests\cas\Unit\Controller;
+namespace Drupal\Tests\tester_base\Unit\Controller;
 
 use Drupal\tester_base\Controller\WhoamiController;
 use Drupal\Tests\UnitTestCase;
-use Symfony\Component\HttpFoundation\Request;
 
 /**
  * ServiceController unit tests.

@@ -4,9 +4,11 @@
 
 Companies want to get Codely subscriptions for their employees.
 
-We need to calculate the total price of the subscription given the number of subscription that a company wants to purchase.
+We need to calculate the total price of the subscription given the number of
+subscription that a company wants to purchase.
 
-The annual unit price of the subscription depends on the volume of the subscriptions as shown in the following table:
+The annual unit price of the subscription depends on the volume of the
+subscriptions as shown in the following table:
 
 | Range  | Unit price  |
 |--------|-------------|

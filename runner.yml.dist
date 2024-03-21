@@ -14,6 +14,10 @@ drupal:
     post_install:
         - "./vendor/bin/drush theme:enable olivero"
         - "./vendor/bin/drush config-set system.theme default olivero -y"
+        - "./vendor/bin/drush en ddd_views"
+        - "./vendor/bin/drush en responses"
+        - "./vendor/bin/drush en tdd_tiered_price"
+        - "./vendor/bin/drush en tester_base"
     additional_settings: |
         if (intval(getenv('DRUPAL_PROXY_ENABLE')) === 1) {
             $settings['http_client_config']['proxy']['http'] = getenv('DRUPAL_PROXY_HTTP');

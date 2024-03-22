@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ddd_test_views.body
+    - node.type.ddd_test_views
+  module:
+    - text
+    - user
+id: node.ddd_test_views.default
+targetEntityType: node
+bundle: ddd_test_views
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

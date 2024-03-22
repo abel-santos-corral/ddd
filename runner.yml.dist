@@ -12,11 +12,13 @@ drupal:
         password: '${env.DRUPAL_ACCOUNT_PASSWORD}'
         mail: abel.santos.corral@gmail.com
     post_install:
-        - "./vendor/bin/drush theme:enable olivero"
-        - "./vendor/bin/drush config-set system.theme default olivero -y"
-        - "./vendor/bin/drush en ddd_views"
-        - "./vendor/bin/drush en responses"
-        - "./vendor/bin/drush en tdd_tiered_price"
+        - {"task":"exec","command":".\/vendor\/bin\/drush theme:enable olivero"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush config-set system.theme default olivero -y"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en admin_toolbar"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en tester_base"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en ddd_views"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en responses"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en tdd_tiered_price"}
         - "./vendor/bin/drush en tester_base"
     additional_settings: |
         if (intval(getenv('DRUPAL_PROXY_ENABLE')) === 1) {

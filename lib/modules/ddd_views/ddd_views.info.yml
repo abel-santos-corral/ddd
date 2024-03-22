@@ -5,3 +5,13 @@ core_version_requirement: ^10
 package: 'ddd'
 dependencies:
   - drupal:views
+
+config_devel:
+  install:
+    - field.field.node.ddd_test_views.body
+    - node.type.ddd_test_views
+    - core.base_field_override.node.ddd_test_views.promote
+    - core.entity_form_display.node.ddd_test_views.default
+    - core.entity_view_display.node.ddd_test_views.default
+    - core.entity_view_display.node.ddd_test_views.teaser
+    - views.view.ddd_test_content

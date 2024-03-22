@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.ddd_test_views.body
+    - field.field.node.ddd_test_views.field_cook_time
+    - field.field.node.ddd_test_views.field_prep_time
     - node.type.ddd_test_views
   module:
     - text
@@ -18,6 +20,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_cook_time:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_prep_time:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

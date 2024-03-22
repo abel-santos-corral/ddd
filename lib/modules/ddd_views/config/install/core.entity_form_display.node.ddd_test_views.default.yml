@@ -3,6 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.ddd_test_views.body
+    - field.field.node.ddd_test_views.field_cook_time
+    - field.field.node.ddd_test_views.field_prep_time
     - node.type.ddd_test_views
   module:
     - path
@@ -27,6 +29,20 @@ content:
     weight: 3
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_cook_time:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_prep_time:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path

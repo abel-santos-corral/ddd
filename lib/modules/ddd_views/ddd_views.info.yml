@@ -8,10 +8,14 @@ dependencies:
 
 config_devel:
   install:
-    - field.field.node.ddd_test_views.body
-    - node.type.ddd_test_views
     - core.base_field_override.node.ddd_test_views.promote
     - core.entity_form_display.node.ddd_test_views.default
     - core.entity_view_display.node.ddd_test_views.default
     - core.entity_view_display.node.ddd_test_views.teaser
+    - field.field.node.ddd_test_views.body
+    - field.field.node.ddd_test_views.field_prep_time
+    - field.field.node.ddd_test_views.field_cook_time
+    - field.storage.node.field_prep_time
+    - field.storage.node.field_cook_time
+    - node.type.ddd_test_views
     - views.view.ddd_test_content

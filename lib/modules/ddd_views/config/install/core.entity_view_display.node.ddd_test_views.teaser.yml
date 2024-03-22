@@ -4,6 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.ddd_test_views.body
+    - field.field.node.ddd_test_views.field_cook_time
+    - field.field.node.ddd_test_views.field_prep_time
     - node.type.ddd_test_views
   module:
     - text
@@ -26,4 +28,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_cook_time: true
+  field_prep_time: true

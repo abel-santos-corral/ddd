@@ -1,0 +1,11 @@
+name: 'DDD News feature'
+type: module
+description: 'Provides custom functional views examples of DDD News feature.'
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - drupal:views
+
+config_devel:
+  install:
+    - views.view.ddd_news_news_subscriptions

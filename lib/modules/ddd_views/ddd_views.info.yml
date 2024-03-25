@@ -1,6 +1,6 @@
-name: 'Custom title sort'
+name: 'DDD Views feature'
 type: module
-description: 'Provides custom title sort plugin for DDD Views feature.'
+description: 'Provides custom functional examples of DDD Views feature.'
 core_version_requirement: ^10
 package: 'ddd'
 dependencies:

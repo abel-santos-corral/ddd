@@ -132,7 +132,13 @@ function ddd_news_views_data() {
       'id' => 'date',
     ],
     'filter' => [
-      'id' => 'date',
+      'title' => t('Subscription length'),
+      'group' => t('Content'),
+      'help' => t('Show subscribers that subscribed last week or month.'),
+      'field' => 'created',
+      // Use our custom ddd_relative_date_filter plugin. The ID here is derived from
+      // the annotation on the filter plugin class.
+      'id' => 'ddd_relative_date_filter',
     ],
     'argument' => [
       'id' => 'date',

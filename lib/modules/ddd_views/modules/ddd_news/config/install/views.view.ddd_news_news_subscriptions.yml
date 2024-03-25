@@ -312,7 +312,53 @@ display:
       empty: {  }
       sorts: {  }
       arguments: {  }
-      filters: {  }
+      filters:
+        created:
+          id: created
+          table: ddd_news_subs
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: ddd_relative_date_filter
+          operator: '='
+          value:
+            relative_date: last_month
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Subscription length'
+            description: ''
+            use_operator: false
+            operator: created_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: created
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: table
       row:
@@ -333,6 +379,7 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags: {  }
   page_ddd_news_news_subscriptions:
@@ -356,5 +403,6 @@ display:
       max-age: -1
       contexts:
         - 'languages:language_interface'
+        - url
         - url.query_args
       tags: {  }

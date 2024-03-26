@@ -1,4 +1,5 @@
 <?php
+
 namespace Drupal\ddd_news\Plugin\views\filter;
 
 use Drupal\Core\Form\FormStateInterface;

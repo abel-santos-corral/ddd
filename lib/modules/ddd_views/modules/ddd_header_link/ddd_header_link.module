@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Provides custom extensions for the DDD Header link feature.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_views_data().
+ */
+function ddd_header_link_views_data() {
+  $data['views']['ddd_header_link'] = [
+    'title' => t('Header Link'),
+    'help' => t('Provides header link'),
+    'area' => [
+      'id' => 'ddd_header_link',
+    ],
+  ];
+  return $data;
+}

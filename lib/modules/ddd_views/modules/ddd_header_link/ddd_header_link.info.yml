@@ -1,0 +1,12 @@
+name: 'DDD Views Header Link'
+type: module
+description: 'Provides custom area header link handler of DDD Views feature.'
+core: 8.x
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - drupal:views
+
+config_devel:
+  install:
+    - views.view.ddd_articles_area

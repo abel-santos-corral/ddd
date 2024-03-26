@@ -1,0 +1,11 @@
+name: 'DDD Slider feature'
+type: module
+description: 'Provides custom slider and a view of DDD Slider feature.'
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - drupal:views
+
+config_devel:
+  install:
+    - views.view.ddd_articles_slider

@@ -164,3 +164,15 @@ function ddd_news_views_data() {
 
   return $data;
 }
+
+/**
+ * Implements hook_theme().
+ */
+function ddd_news_theme($existing, $type, $theme, $path) {
+  \Drupal::moduleHandler()->loadInclude('ddd_news', 'inc', 'ddd_news.theme');
+  return [
+    'views_view_accordion' => [
+      'file' => 'ddd_news.theme.inc',
+    ],
+  ];
+}

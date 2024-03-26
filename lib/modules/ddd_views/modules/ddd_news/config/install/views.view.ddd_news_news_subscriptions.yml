@@ -394,10 +394,10 @@ display:
         type: normal
         title: 'Views - Expose custom table'
         description: 'View to showcase the exposure of a custom table.'
-        weight: -10
+        weight: -15
         expanded: true
         menu_name: main
-        parent: ''
+        parent: 'menu_link_content:e4720345-d30b-4c16-89d5-9b2e73cee015'
         context: '0'
     cache_metadata:
       max-age: -1

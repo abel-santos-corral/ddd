@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.article
+    - system.menu.main
   module:
     - ddd_header_link
     - node
@@ -205,6 +206,15 @@ display:
     display_options:
       display_extenders: {  }
       path: ddd-articles-area
+      menu:
+        type: normal
+        title: 'Custom area'
+        description: 'Provides a custom views area handler plugin'
+        weight: -20
+        expanded: true
+        menu_name: main
+        parent: 'menu_link_content:e4720345-d30b-4c16-89d5-9b2e73cee015'
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

@@ -203,12 +203,12 @@ display:
       path: test-content-sort
       menu:
         type: normal
-        title: 'Views - Sorting'
+        title: Sorting
         description: 'Views to showcase the sorting of a custom views sort plugin'
         weight: -5
         expanded: true
         menu_name: main
-        parent: ''
+        parent: 'menu_link_content:e4720345-d30b-4c16-89d5-9b2e73cee015'
         context: '0'
     cache_metadata:
       max-age: -1
@@ -524,12 +524,12 @@ display:
       path: test-content-fields
       menu:
         type: normal
-        title: 'Views - Pseudo field'
+        title: 'Pseudo field'
         description: 'Views to showcase the pseudo field plugin'
-        weight: -5
+        weight: -10
         expanded: true
         menu_name: main
-        parent: 'views_view:views.ddd_test_content.page_1'
+        parent: 'menu_link_content:e4720345-d30b-4c16-89d5-9b2e73cee015'
         context: '0'
     cache_metadata:
       max-age: -1

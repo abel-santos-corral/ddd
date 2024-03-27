@@ -174,7 +174,12 @@ display:
           value:
             article: article
       style:
-        type: default
+        type: accordion
+        options:
+          row_class: abelius
+          default_row_class: true
+          uses_fields: false
+          summary_text: Article
       row:
         type: 'entity:node'
         options:

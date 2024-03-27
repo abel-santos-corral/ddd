@@ -38,6 +38,20 @@ function ddd_news_views_data() {
     ]
   ];
 
+  // This table references the {users_field_data} table.
+  // The declaration below creates an
+  // 'implicit' relationship to the table, so that when it is the base
+  // table, the fields are automatically available.
+  $data['ddd_news_subs']['table']['join'] = [
+    // The key of this inner array is the name of the table to join to.
+    'users_field_data' => [
+      // The primary key in the referenced table e.g.) user_field_data.mail.
+      'left_field' => 'mail',
+      // The foreign key in this table e.g.) news_subs.email.
+      'field' => 'email',
+    ],
+  ];
+
   // Other top level elements of the ddd_news_subs array define the individual
   // columns of the table that you want to make available to Views. The key is
   // the name (and must be unique) used by Views. It's usually the same as the

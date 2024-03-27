@@ -8,6 +8,6 @@ dependencies:
   - search_api:search_api_db_defaults
   - drupal:views
 
-config_devel:
-  install:
-    - views.view.search_content
+#config_devel:
+#  install:
+#    - views.view.search_content

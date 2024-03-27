@@ -16,6 +16,7 @@ config_devel:
     - field.field.user.user.field_resident_editor
     - views.view.ddd_articles_access
     - views.view.ddd_news_news_subscriptions
+    - views.view.ddd_people
 # List of config overrides. Config_devel doesn't export these entries automatically.
 # Copy them temporarily in the above list if you need to update them.
 #   - core.entity_view_display.user.user.default

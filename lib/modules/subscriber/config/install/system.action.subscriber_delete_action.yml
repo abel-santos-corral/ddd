@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - subscriber
+id: subscriber_delete_action
+label: 'Delete subscribers'
+type: subscriber
+plugin: entity:delete_action:subscriber
+configuration: {  }

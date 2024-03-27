@@ -1,0 +1,9 @@
+name: 'Subscriber'
+type: module
+description: 'Provides a custom entity Subscriber for demo purposes.'
+package: ddd
+core_version_requirement: ^10
+
+config_devel:
+  install:
+    - views.view.subscribers

@@ -1,7 +1,7 @@
 slider:
   version: 1.x
   js:
-    /libraries/slick/slick.js: {}
+    /libraries/slick/slick.min.js: {}
     js/init_slick.js: {}
   css:
     theme:

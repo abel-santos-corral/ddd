@@ -1,0 +1,13 @@
+name: 'DDD Search feature'
+type: module
+description: 'Provides custom functional search examples of DDD Search feature.'
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - search_api:search_api_db
+  - search_api:search_api_db_defaults
+  - drupal:views
+
+config_devel:
+  install:
+    - views.view.search_content

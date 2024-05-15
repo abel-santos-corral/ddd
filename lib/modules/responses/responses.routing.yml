@@ -31,8 +31,16 @@ responses.example_plain_html:
     # This is a test page, hence no access check is needed.
     _access: 'TRUE'
 responses.pdf_download:
-  path: /pdf-download
+  path: '/pdf-download'
   defaults:
     _controller: Drupal\responses\Controller\DownloadController::page
   requirements:
     _user_is_logged_in: 'TRUE'
+
+responses.download_page:
+  path: '/pdf-download-page'
+  defaults:
+    _title: 'Download Page'
+    _controller: '\Drupal\responses\Controller\DownloadPageController'
+  requirements:
+    _permission: 'access content'

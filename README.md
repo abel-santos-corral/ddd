@@ -97,3 +97,5 @@ conflict manually and then update the lock file.
 ```bash
 docker-compose exec web composer update --lock
 ```
+
+# Github Actions

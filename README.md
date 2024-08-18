@@ -99,3 +99,5 @@ docker-compose exec web composer update --lock
 ```
 
 # Github Actions
+
+Added workflows at the github folder. Trying new stuff-.

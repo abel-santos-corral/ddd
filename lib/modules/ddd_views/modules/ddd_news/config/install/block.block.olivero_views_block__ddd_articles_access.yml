@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.ddd_articles_access
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__ddd_articles_access
+theme: olivero
+region: content_below
+weight: 0
+provider: null
+plugin: 'views_block:ddd_articles_access-block_ddd_articles_access'
+settings:
+  id: 'views_block:ddd_articles_access-block_ddd_articles_access'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

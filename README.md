@@ -19,10 +19,10 @@ and [Docker Compose](https://docs.docker.com/compose/install/)
 
 The project ships with default configuration in the `runner.yml.dist` file. This
 file is configured to run the website on the provided docker containers. If you
-are happy using those, you can skip directly to the 
-[installing the project](#14-installing-the-project) section. You can customize 
-the default configuration by copying `runner.yml.dist` to `runner.yml` and 
-changing for example the connection details for your database server and 
+are happy using those, you can skip directly to the
+[installing the project](#14-installing-the-project) section. You can customize
+the default configuration by copying `runner.yml.dist` to `runner.yml` and
+changing for example the connection details for your database server and
 selenium server.
 
 ### 1.3 Setting up the environment
@@ -51,15 +51,15 @@ alias dcweb="docker-compose exec web"
 
 ```bash
 # Run composer install in the web service.
-dcweb composer install
+docker-compose exec web composer install
 # Build your development instance of the website.
-dcweb ./vendor/bin/run toolkit:build-dev
+docker-compose exec web ./vendor/bin/run toolkit:build-dev
 # Perform a clean installation of the website.
-dcweb ./vendor/bin/run toolkit:install-clean
+docker-compose exec web ./vendor/bin/run toolkit:install-clean
 # Perform a clone installation with production data.
-dcweb ./vendor/bin/run toolkit:install-clone
+docker-compose exec web ./vendor/bin/run toolkit:install-clone
 # Get the uri to start working on the browser.
-dcweb ./vendor/bin/drush uli --uri=http://localhost:8080/web/
+docker-compose exec web ./vendor/bin/drush uli --uri=http://localhost:8080/web/
 ```
 
 Using default configuration your Drupal site will be available locally at:
@@ -82,11 +82,11 @@ setting up a project there it will be available at either:
 
 ```bash
 # Run coding standard checks.
-dcweb ./vendor/bin/run toolkit:test-phpcs
+docker-compose exec web ./vendor/bin/run toolkit:test-phpcs
 # Run behat tests on a clean installation.
-dcweb ./vendor/bin/run toolkit:test-behat
+docker-compose exec web ./vendor/bin/run toolkit:test-behat
 # Run behat tests on a clone installation.
-dcweb ./vendor/bin/run toolkit:test-behat -D "behat.tags=@clone"
+docker-compose exec web ./vendor/bin/run toolkit:test-behat -D "behat.tags=@clone"
 ```
 
 ### 1.6 Updating composer.lock
@@ -95,5 +95,9 @@ When having a conflict on the composer.lock file it is best to solve the
 conflict manually and then update the lock file.
 
 ```bash
-dcweb composer update --lock
+docker-compose exec web composer update --lock
 ```
+
+# Github Actions
+
+Added workflows at the github folder. Trying new stuff.

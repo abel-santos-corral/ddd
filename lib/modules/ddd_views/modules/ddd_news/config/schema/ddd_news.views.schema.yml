@@ -1,0 +1,8 @@
+# 'ddd_relative_date_filter' should match your plugin name.
+views.filter_value.ddd_relative_date_filter:
+  type: mapping
+  label: 'Relative Date Filter'
+  mapping:
+    relative_date: #matches machine name of the form element
+      type: string
+      label: 'Relative Date Filter'

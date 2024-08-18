@@ -4,28 +4,43 @@ responses.example_plain_text:
     _controller: '\Drupal\responses\Controller\ExamplePlainTextController::build'
     _title: 'Example plain text'
   requirements:
+    # This is a test page, hence no access check is needed.
     _access: 'TRUE'
-
 responses.example_cacheable_text:
   path: '/responses/example-cacheable-text'
   defaults:
     _controller: '\Drupal\responses\Controller\ExamplePlainTextControllerCacheable::buildCacheableResponse'
     _title: 'Example plain text with cacheability'
   requirements:
+    # This is a test page, hence no access check is needed.
     _access: 'TRUE'
-
 responses.example_json_cached:
   path: '/responses/json-response-cached'
   defaults:
     _controller: '\Drupal\responses\Controller\ExampleJsonController::buildCacheableResponse'
     _title: 'Example JSON response cached'
   requirements:
+    # This is a test page, hence no access check is needed.
     _access: 'TRUE'
-
 responses.example_plain_html:
   path: '/responses/example-plain-html'
   defaults:
     _controller: '\Drupal\responses\Controller\ExamplePlainHtmlController::build'
     _title: 'Example plain html'
   requirements:
+    # This is a test page, hence no access check is needed.
     _access: 'TRUE'
+responses.pdf_download:
+  path: '/pdf-download'
+  defaults:
+    _controller: Drupal\responses\Controller\DownloadController::page
+  requirements:
+    _user_is_logged_in: 'TRUE'
+
+responses.download_page:
+  path: '/pdf-download-page'
+  defaults:
+    _title: 'Download Page'
+    _controller: '\Drupal\responses\Controller\DownloadPageController'
+  requirements:
+    _permission: 'access content'

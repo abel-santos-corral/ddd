@@ -12,8 +12,15 @@ drupal:
         password: '${env.DRUPAL_ACCOUNT_PASSWORD}'
         mail: abel.santos.corral@gmail.com
     post_install:
-        - "./vendor/bin/drush theme:enable olivero"
-        - "./vendor/bin/drush config-set system.theme default olivero -y"
+        - {"task":"exec","command":".\/vendor\/bin\/drush theme:enable olivero"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush config-set system.theme default olivero -y"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en admin_toolbar"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en tester_base"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en ddd_views"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en responses"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en tdd_tiered_price"}
+        - {"task":"exec","command":".\/vendor\/bin\/drush en ddd_search,"}
+        - "./vendor/bin/drush en tester_base"
     additional_settings: |
         if (intval(getenv('DRUPAL_PROXY_ENABLE')) === 1) {
             $settings['http_client_config']['proxy']['http'] = getenv('DRUPAL_PROXY_HTTP');
@@ -81,6 +88,7 @@ toolkit:
             commands:
                 - { task: run, command: 'drupal:setup-test' }
                 - { task: symlink, from: "../../../resources/monolog.services.yml", to: "${drupal.root}/sites/default/monolog.services.yml" }
+                - { task: "symlink", from: "../resources/libraries", to: "${drupal.root}/libraries" }
                 - { task: "symlink", from: "../../lib/modules", to: "${drupal.root}/modules/custom" }
                 - { task: "symlink", from: "../../lib/themes", to: "${drupal.root}/themes/custom" }
                 - { task: "symlink", from: "../../lib/profiles", to: "${drupal.root}/profiles/custom" }

@@ -1,0 +1,6 @@
+services:
+  ddd_news.views_access:
+    class: Drupal\ddd_news\Access\CustomViewsAccessCheck
+    arguments: ['@current_user']
+    tags:
+      - { name: access_check, applies_to: _custom_views_access_check }

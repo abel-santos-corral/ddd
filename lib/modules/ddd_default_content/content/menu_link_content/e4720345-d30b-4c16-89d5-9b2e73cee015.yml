@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: e4720345-d30b-4c16-89d5-9b2e73cee015
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'DDD Views'
+  description:
+    -
+      value: 'Expose all view pages for DDD views.'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'route:<nolink>'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 5
+  expanded:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Provides custom extensions for the DDD slider feature.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ddd_slider_views_pre_render(\Drupal\views\ViewExecutable $view) {
+  if ($view->id() == 'ddd_articles_slider') {
+    $view->element['#attached']['library'][] = 'ddd_slider/slider';
+  }
+}

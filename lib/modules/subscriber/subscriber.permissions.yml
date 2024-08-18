@@ -1,0 +1,3 @@
+administer subscriber:
+  title: 'Administer subscribers'
+  restrict access: true

@@ -1,0 +1,24 @@
+name: 'DDD News feature'
+type: module
+description: 'Provides custom functional views examples of DDD News feature.'
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - drupal:views
+
+config_devel:
+  install:
+    - block.block.olivero_views_block__ddd_articles_access
+    - core.entity_view_display.user.user.default
+    - core.entity_view_display.user.user.compact
+    - core.entity_form_display.user.user.default
+    - field.storage.user.field_resident_editor
+    - field.field.user.user.field_resident_editor
+    - views.view.ddd_articles_access
+    - views.view.ddd_news_news_subscriptions
+    - views.view.ddd_people
+# List of config overrides. Config_devel doesn't export these entries automatically.
+# Copy them temporarily in the above list if you need to update them.
+#   - core.entity_view_display.user.user.default
+#   - core.entity_view_display.user.user.compact
+#   - core.entity_form_display.user.user.default

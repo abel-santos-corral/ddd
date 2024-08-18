@@ -1,0 +1,6 @@
+name: 'Tester base'
+type: module
+description: 'Provides module for the training of pupunit, behat and other stuff of testing for DDD Tester base feature.'
+package: 'ddd'
+php: 8.x
+core_version_requirement: ^10

@@ -1,0 +1,21 @@
+name: 'DDD Views feature'
+type: module
+description: 'Provides custom functional examples of DDD Views feature.'
+core_version_requirement: ^10
+package: 'ddd'
+dependencies:
+  - drupal:views
+
+config_devel:
+  install:
+    - core.base_field_override.node.ddd_test_views.promote
+    - core.entity_form_display.node.ddd_test_views.default
+    - core.entity_view_display.node.ddd_test_views.default
+    - core.entity_view_display.node.ddd_test_views.teaser
+    - field.field.node.ddd_test_views.body
+    - field.field.node.ddd_test_views.field_prep_time
+    - field.field.node.ddd_test_views.field_cook_time
+    - field.storage.node.field_prep_time
+    - field.storage.node.field_cook_time
+    - node.type.ddd_test_views
+    - views.view.ddd_test_content

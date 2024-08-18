@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Provides custom extensions for the DDD Views feature.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function ddd_views_views_data_alter(array &$data) {
+  $data['node_field_data']['natural_title_sort'] = [
+    'title' => t('Natural title sort'),
+    'group' => t('Content'),
+    'help' => t('Sort titles naturally'),
+    'sort' => [
+      'field' => 'title',
+      'id' => 'natural_title_sort',
+    ],
+  ];
+
+  // This 'full_time' field is a pseudo field and doesn't correspond with any
+  // specific database table. Instead, its data is computed by adding together
+  // the values of the `field_cook_time` and `field_prep_time` fields on the
+  // 'recipe' content type.
+  // @see \Drupal\recipe\Plugin\views\field\FullTime.
+  $data['node']['full_time'] = [
+    'title' => t('Full cook and prep time'),
+    'field' => [
+      'title' => t('Full cook and prep time'),
+      'help' => t('Total value of cook and prep time. <em>Appears on Recipe nodes only.</em>'),
+      'id' => 'full_time',
+    ],
+  ];
+}

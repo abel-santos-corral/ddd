@@ -1,0 +1,12 @@
+name: DDD Default Content
+type: module
+description: Provide default content for showcasing.
+package: 'ddd'
+core_version_requirement: ^10
+dependencies:
+  - default_content:default_content
+
+default_content:
+  menu_link_content:
+    # DDD Pages
+    - e4720345-d30b-4c16-89d5-9b2e73cee015
